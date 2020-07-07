@@ -1,8 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 const GenerationEngine = require('./generation/engine');
 const dragonRouter = require('./api/dragon');
-const generationRouter = require('./api/generation')
+const generationRouter = require('./api/generation');
+const accountRouter = require('./api/account');
+
 
 const app = express();
 const engine = new GenerationEngine();
@@ -12,10 +15,11 @@ app.locals.engine = engine;
 app.use(cors({
     origin: 'http://localhost:5100'
 }));
+app.use(bodyParser.json());
 
+app.use('/account', accountRouter);
 app.use('/dragon', dragonRouter);
 app.use('/generation', generationRouter);
-
 
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;

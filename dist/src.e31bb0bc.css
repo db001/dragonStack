@@ -1,0 +1,75 @@
+html {
+    height: 100%;
+}
+
+h3,
+h4 {
+    margin: 0;
+}
+
+body {
+    background-image: url("https://wallpaperaccess.com/full/481543.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 16px;
+    font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    padding: 8px;
+    padding-right: 24px;
+    font-weight: bold;
+    font-family: "Tangerine", cursive;
+    font-size: 64px;
+    border-radius: 5px;
+}
+
+.dragonWrapper {
+    margin-top: 16px;
+    background: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    padding: 16px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.dragonWrapper button {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.traitsString span {
+    margin-left: 16px;
+    float: right;
+}
+
+.identWrapper {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.generationContainer {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-bottom: 16px;
+}
+
+h4 {
+    margin-bottom: 8px;
+}
+
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */

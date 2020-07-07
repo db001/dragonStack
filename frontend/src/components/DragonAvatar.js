@@ -5,11 +5,11 @@ export class DragonAvatar extends Component {
 
         const { generationId, dragonId, traits } = this.props.dragon;
 
-        if (!dragonId) return <div></div>;
+        if (!dragonId) return <div>No dragons here</div>;
 
-        const traitValues = traits.map(trait => {
+        const traitValues = traits.map((trait, index) => {
             return (
-                <p>{trait.traitType[0].toUpperCase() + trait.traitType.slice(1)}: <span>{trait.traitValue[0].toUpperCase() + trait.traitValue.slice(1)}</span></p>)
+                <p key={index}>{trait.traitType[0].toUpperCase() + trait.traitType.slice(1)}: <span>{trait.traitValue[0].toUpperCase() + trait.traitValue.slice(1)}</span></p>)
         });
 
         return (
@@ -18,7 +18,7 @@ export class DragonAvatar extends Component {
                     <span>G{generationId} </span>
                     <span>I{dragonId}</span>
                 </div>
-                <div class="traitsString">{traits.length > 0 && traitValues}</div>
+                <div className="traitsString">{traits.length > 0 && traitValues}</div>
             </div>
         )
     }
