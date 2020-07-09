@@ -3,9 +3,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import Generation from './components/Generation';
-import Dragon from './components/Dragon';
 import rootReducers from './reducers';
+import Root from './components/Root';
 import './index.css';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -17,10 +16,7 @@ const store = createStore(
 
 render(
     <Provider store={store}>
-        <div className="rootWrapper">
-            <Generation />
-            <Dragon />
-        </div>
+        <Root />
     </Provider>,
     document.getElementById('root')
 );
